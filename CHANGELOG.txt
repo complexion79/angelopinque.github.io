@@ -1,0 +1,79 @@
+Ichae Semos — Responsive HTML5 Web Design Portfolio Template
+==============================================================
+
+Version 2.0 — 2026
+------------------
+
+A rebuild on a modern stack — the same design, checked block by block
+against version 1 at desktop, tablet and phone widths — plus the pages the
+site always pointed at but never had, an inquiry auto-reply email and a
+downloadable CV in the same design, and the things that were broken in
+version 1 quietly fixed.
+
+
+NEW
+- project.html — a case-study page (cover photo, write-up, project facts,
+  a small gallery) behind every portfolio tile, which in version 1 opened
+  nothing.
+- article.html — a full article page behind every "Articles" card, which
+  in version 1 also opened nothing.
+- 404.html — a not-found page with three ways back in; version 1 shipped
+  none.
+- ichaesemos-cv.pdf — the file behind "Download CV", which in version 1
+  went nowhere at all.
+- email-inquiry.html — the auto-reply a visitor gets after using the
+  contact form: their message quoted back, what happens next, and a link
+  to the portfolio. Table-based, inline-styled, 600px wide, with an
+  Outlook conditional and a phone layout — the way mail clients need it.
+  Before sending, replace the images/... paths with absolute URLs on your
+  server and put your links in place of the "#" ones (the file says so at
+  the top).
+
+FIXED (things that were broken in version 1)
+- 14 of the site's 31 links were "#" links that reloaded the page: the six
+  portfolio tiles, the four "Articles" cards and the four footer social
+  icons now go to the project page, the article page and the real
+  networks.
+- The back-to-top button had working JavaScript (a fade-in on scroll, a
+  scroll-to-top on click) but no button in the page for it to act on —
+  the code ran against nothing. The button is in the page now.
+- The contact form's three fields had no <label>s and only one had a name
+  attribute; all three are labelled and named now.
+- The one page had no meta description; it has one now.
+
+DESIGN
+- Unchanged. The fonts are version 1's own self-hosted kit (Roboto and
+  Open Sans), still self-hosted, woff2 only.
+- The four dummy "client" logo images (styled seals with no real companies
+  behind them) are a plain numbers strip now — years of experience,
+  projects shipped, happy clients — in the same spot. The two "Articles"
+  cards line up to equal height instead of the shorter one leaving a gap.
+  Both are phone/tablet-safe versions of the same change; desktop measures
+  identical to version 1 everywhere else.
+
+UNDER THE HOOD
+- jQuery + wow.js + jquery.inview + shuffle.js + jquery.imagesloaded +
+  masonry.pkgd + owl.carousel + a bundled smooth-scroll library → Bootstrap
+  5.3, no jQuery. The mobile menu, the scroll-spy nav highlight and the
+  testimonial slider are Bootstrap 5's own; js/main.js is one
+  dependency-free file for the rest: the back-to-top button, the skill-bar
+  reveal, the portfolio filter and the contact form's client-side check.
+- css/bs3-compat.css: the Bootstrap 3 behaviours this design relies on (the
+  1170 container, the dropdown-menu active state) restored on top of
+  Bootstrap 5. Safe to trim.
+- Every page: a unique <title> and meta description, lang="en", one h1, no
+  inline styles, no inline scripts, every image with alt text and
+  width/height (no layout shift), lazy loading below the fold, labelled
+  form fields, https links.
+
+FILES
+  index.html · project.html · article.html · 404.html ·
+  email-inquiry.html · ichaesemos-cv.pdf · css/ · js/ · fonts/ · images/ ·
+  License.txt · CHANGELOG.txt
+
+Version 1.0
+-----------
+Initial release: one-page HTML5 portfolio template, Bootstrap 3, jQuery.
+
+License: see License.txt. Please keep the ThemeVault link in the footer of
+the free version; the credit-removal option is available on the site.
